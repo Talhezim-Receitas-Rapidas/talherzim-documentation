@@ -21,6 +21,7 @@ erDiagram
     string nome
     numeric quantidade
     string unidade
+    timestamp criado_em
     timestamp atualizado_em
   }
   RECEITAS {
@@ -30,6 +31,7 @@ erDiagram
     string imagem_url
     string fonte
     string fonte_id
+    timestamp criado_em
   }
   RECEITA_INGREDIENTES {
     uuid id PK

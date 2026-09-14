@@ -4,7 +4,7 @@
 **Issue relacionada:** [#3 — Modelagem de Fluxo do APP](https://github.com/Talhezim-Receitas-Rapidas/talherzim-documentation/issues/3)
 **Base:** Documento de Levantamento de Requisitos (RF/RNF) + Detalhamento de Tarefas — Talherzim Backend
 
-Este documento mapeia os fluxos de navegação/uso principais do aplicativo, cobrindo entrada e saída de cada tela, conforme pedido na tarefa #2 do board (*Modelagem de Fluxo do APP*). Cada fluxo indica em qual etapa cada requisito funcional (RFxx) é atendido e cobre pelo menos um caminho de erro/exceção.
+Este documento mapeia os fluxos de navegação/uso principais do aplicativo, cobrindo entrada e saída de cada tela, conforme pedido na tarefa #3 do board (*Modelagem de Fluxo do APP*). Cada fluxo indica em qual etapa cada requisito funcional (RFxx) é atendido e cobre pelo menos um caminho de erro/exceção.
 
 Os diagramas usam sintaxe Mermaid, renderizada nativamente pelo GitHub ao visualizar este arquivo `.md` no repositório — não é necessário nenhum visualizador externo.
 
@@ -115,4 +115,4 @@ flowchart TD
 
 - Os fluxos 1 a 4 correspondem às Prioridades 1 e 2 do stakeholder (autenticação, despensa, sugestão, detalhe) e devem ser tratados como bloqueantes para o critério de aceite do MVP.
 - O fluxo 5 é o incremento opcional descrito na Seção 6 do documento de requisitos — só deve ser implementado após a estabilização dos fluxos 1 a 4, e sua ausência não bloqueia a entrega.
-- Este arquivo pode ser adicionado à pasta de documentação do repositório `talherzim-documentation` (ex.: `docs/modelagem-fluxo-app.md`) e referenciado diretamente na issue #3, já que o GitHub renderiza os blocos Mermaid automaticamente ao abrir o arquivo.
+- Este arquivo está localizado em `docs/modelagem-fluxo-app.md` e é referenciado diretamente na issue #3, já que o GitHub renderiza os blocos Mermaid automaticamente ao abrir o arquivo.

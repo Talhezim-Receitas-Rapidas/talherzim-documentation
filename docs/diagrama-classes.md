@@ -35,6 +35,7 @@ classDiagram
         -string imagemUrl
         -string fonte
         -string fonteId
+        -Date criadoEm
 
         +ingredientes() ReceitaIngrediente[]
     }
