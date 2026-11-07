@@ -4,6 +4,8 @@ Modelagem de dados do projeto "Organizador de Receitas com Sugestão por
 Ingredientes Disponíveis" (task #2). Referência: documento de levantamento
 de requisitos (RF01–RF11, RNF06, RNF07).
 
+A consulta externa acrescenta a tabela auxiliar `traducoes_receitas`, com `receita_id` como chave primária textual, `original` como assinatura textual dos campos de origem e `conteudo` como JSONB da tradução. Ela guarda textos públicos traduzidos e não tem chave estrangeira para `receitas`, pois as receitas externas permanecem no provedor. Os detalhes estão no [fluxo de consulta externa](consulta-externa.md#persistência-e-atualização).
+
 ```mermaid
 erDiagram
   USUARIOS ||--o{ INGREDIENTES : possui

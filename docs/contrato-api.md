@@ -1,14 +1,13 @@
 # Contrato da API — Talherzim
 
-Especificação legível dos endpoints de **autenticação** (RF01, RF02) da Semana 1.
-O contrato formal, em OpenAPI 3.0.3, está em [`../openapi.yaml`](../openapi.yaml)
+Especificação legível dos endpoints de **autenticação** (RF01, RF02) da Semana 1. As rotas implementadas de despensa e receitas estão descritas no [contrato complementar de consulta externa](consulta-externa.md#contrato-das-rotas).
+O contrato formal, em OpenAPI 3.0.3, está no [repositório do backend](https://github.com/Talhezim-Receitas-Rapidas/talherzim-backend/blob/main/src/openapi.yaml)
 e pode ser aberto no [Swagger Editor](https://editor.swagger.io/) ou no Postman.
 
 - **Base URL (local):** `http://localhost:3000`
 - **Content-Type:** `application/json`
-- **Versão do contrato:** `1.0.0`
-- **Escopo atual:** autenticação. Despensa, sugestão e receitas entram nas fases
-  seguintes do [roadmap](../roadmap.md).
+- **Versão do contrato:** `1.1.0`
+- **Escopo deste arquivo:** autenticação. O contrato complementar documenta despensa, sugestão e receitas já implementadas.
 
 ---
 
@@ -45,8 +44,9 @@ Todos os erros usam o mesmo envelope JSON:
 }
 ```
 
-- `erro` é um **código estável em `snake_case`** — o cliente deve comparar por
+- Nos endpoints de autenticação, `erro` é um **código estável em `snake_case`** — o cliente deve comparar por
   ele, não pelo texto da mensagem.
+- As rotas de despensa e receitas usam o mesmo envelope. As mensagens de recurso ausente e de fonte externa indisponível são descritas no contrato complementar.
 - `campos` traz os erros de validação por campo e vem **vazio** (`[]`) quando o
   erro não é de validação.
 
@@ -235,7 +235,4 @@ curl -X POST http://localhost:3000/auth/logout \
 
 ## 6. Convenções de mudança no contrato
 
-O contrato é **congelado na Semana 1** (ver [semana-1.md](../semana-1.md)).
-Alterações em rota, payload ou código de erro exigem alinhamento com o Lead e o
-dev do front-end, além de atualizar **este documento e o [`../openapi.yaml`](../openapi.yaml)**
-no mesmo PR, seguindo as [instruções de commit](commits.md).
+Alterações em rota, payload ou código de erro devem ser alinhadas entre backend e frontend e atualizar a documentação da rota e o [OpenAPI do backend](https://github.com/Talhezim-Receitas-Rapidas/talherzim-backend/blob/main/src/openapi.yaml), seguindo as [instruções de commit](commits.md).
