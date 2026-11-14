@@ -18,7 +18,9 @@ Repositório dedicado à documentação do **Talherzim**, um organizador de rece
 
 | Documento | Conteúdo |
 |---|---|
-| [openapi.yaml](openapi.yaml) | Contrato OpenAPI 3.0.3 dos endpoints de autenticação, com schemas, formato de erro e segurança `Bearer`. |
+| [docs/consulta-externa.md](docs/consulta-externa.md) | Busca local e externa, tradução para português, contrato das novas rotas, configuração e demonstração. |
+| [docs/alteracoes-consulta-externa.md](docs/alteracoes-consulta-externa.md) | Alterações no backend e frontend, testes e atualização do banco. |
+| [OpenAPI do backend](https://github.com/Talhezim-Receitas-Rapidas/talherzim-backend/blob/main/src/openapi.yaml) | Contrato de autenticação, despensa e receitas, com schemas, respostas e segurança `Bearer`. |
 | [docs/contrato-api.md](docs/contrato-api.md) | Versão legível do contrato da API: header de autenticação, formato de erro, endpoints e exemplos com `curl`. |
 | [docs/commits.md](docs/commits.md) | Guia de mensagens de commit no padrão [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). |
 | [docs/requisitos.md](docs/requisitos.md) | Conversa com o stakeholder, escopo do MVP, requisitos funcionais (RF01–RF16) e não funcionais (RNF01–RNF13), cronograma e critério de aceite. |
@@ -26,7 +28,6 @@ Repositório dedicado à documentação do **Talherzim**, um organizador de rece
 | [docs/schema.sql](docs/schema.sql) | Script de criação do schema PostgreSQL (tabelas `usuarios`, `ingredientes`, `receitas`, `receita_ingredientes` e índices). |
 | [docs/diagrama-classes.md](docs/diagrama-classes.md) | Diagrama de classes com entidades, serviços e provedores de dados. |
 | [docs/modelagem-fluxo-app.md](docs/modelagem-fluxo-app.md) | Fluxos de navegação/uso do app e rastreabilidade fluxo × requisito × caminho de erro. |
-| [semana-1.md](semana-1.md) | Plano da semana 1: contrato da API, divisão do time, issues e Definition of Done. |
 | [resumo.md](resumo.md) | Resumo consolidado de toda a documentação. |
 | [roadmap.md](roadmap.md) | Roadmap de execução do projeto, por fases e semanas. |
 
@@ -43,11 +44,11 @@ talherzim-documentation/
 │   ├── diagrama-classes.md
 │   ├── modelagem-fluxo-app.md
 │   ├── contrato-api.md
+│   ├── consulta-externa.md
+│   ├── alteracoes-consulta-externa.md
 │   └── commits.md
-├── openapi.yaml
 ├── resumo.md
 ├── roadmap.md
-├── semana-1.md
 ├── README.md
 └── LICENSE
 ```
@@ -92,13 +93,13 @@ Tipos e escopos permitidos: veja [docs/commits.md](docs/commits.md#2-tipos-permi
 
 ### Contrato da API
 
-O contrato fica em [openapi.yaml](openapi.yaml) e na versão legível em
+O contrato fica no [OpenAPI do backend](https://github.com/Talhezim-Receitas-Rapidas/talherzim-backend/blob/main/src/openapi.yaml) e na versão legível em
 [docs/contrato-api.md](docs/contrato-api.md). Alterações de rota, payload ou
-código de erro devem atualizar os dois arquivos no mesmo PR.
+código de erro devem atualizar o contrato formal e a documentação da rota.
 
 ## Escopo do MVP
 
-**Incluso:** autenticação de usuários, CRUD da despensa de ingredientes, base de receitas (API Spoonacular ou dataset estático), matching/ranqueamento por ingredientes correspondentes e listagem/detalhe de receitas.
+**Incluso:** autenticação de usuários, CRUD da despensa, receitas locais e consulta externa pela TheMealDB, tradução dos detalhes, ranqueamento por ingredientes correspondentes e listagem/detalhe de receitas.
 
 **Fora do escopo:** app mobile nativo, recomendação por IA/ML, filtros avançados, compartilhamento social e avaliações de receitas.
 
